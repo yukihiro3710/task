@@ -12,7 +12,7 @@ class CardController < ApplicationController
     if @card.save
       redirect_to :root
     else
-      @lists = List.where(user: current_user)
+      @list = List.find_by(id: params[:list_id])
       render action: :new
     end
   end
