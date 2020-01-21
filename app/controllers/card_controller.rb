@@ -12,6 +12,7 @@ class CardController < ApplicationController
     if @card.save
       redirect_to :root
     else
+      @lists = List.where(user: current_user)
       render action: :new
     end
   end
@@ -25,11 +26,11 @@ class CardController < ApplicationController
   end
 
   def update
- 
+    @lists = List.where(user: current_user)
     if @card.update_attributes(card_params)
       redirect_to :root
     else
-      render :new
+      render action: :edit
     end
   end
 
