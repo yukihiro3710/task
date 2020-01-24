@@ -69,3 +69,44 @@
     }
   }
 }
+$box-size_width: 120px;
+$box-size_height: 110px;
+$box-color_background: #CECECE;
+
+@mixin base_box {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  height: $box-size_height;
+  width: $box-size_width;
+
+  background: $box-color_background;
+  text-align: center;
+  margin: 1rem;
+}
+
+#drag-and-drop-demo {
+  display: flex;
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+
+  justify-content: center;
+  flex-direction: row;
+
+  margin-top: 3rem;
+
+  
+  #drop-point {
+    @include base_box;
+    border: 1px dashed #0A0A0A;
+
+    .card {
+      @include base_box;
+      border: 1px solid #0A0A0A;
+    }
+  }
+}
