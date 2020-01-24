@@ -4,12 +4,10 @@
     <title>Task</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
+  <body>  
    <%= render 'partial/header' if current_user %>
      <% if flash[:notice] %>
       <div class="alert alert-info">
