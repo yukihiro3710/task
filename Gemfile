@@ -65,3 +65,5 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'devise'
+gem 'pg', group: :production 
+gem 'sqlite3', '~>1.3.6', group: :development  
